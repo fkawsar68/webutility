@@ -1,46 +1,137 @@
-<!-- Personal Ledger Card -->
-<div class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm hover:shadow-md transition-all relative flex flex-col justify-between">
-    <div>
-        <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6">
-                        <rect x="25" y="25" width="50" height="50" rx="8" fill="none" stroke="white" stroke-width="6"/>
-                        <path d="M35 38h30M35 50h30M35 62h20" stroke="white" stroke-linecap="round"/>
-                        <circle cx="60" cy="62" r="5" fill="#16a34a"/>
-                    </svg>
-                </div>
+Because the original central landing page HTML code for your webutility
+repository was not pasted into this chat session, I do not have its exact
+previous text in my active context.
+
+However, you can instantly recover your exact original landing page file using
+one of the two methods below.
+
+Method 1: If you edited the file in your terminal (using Git)
+
+If you made edits locally and haven't committed them, run this terminal command
+in your webutility project folder to instantly discard the changes and restore
+your original file:
+
+git checkout -- index.html
+
+If you already committed and pushed the changes to GitHub, you can revert the
+last commit with:
+
+git reset --hard HEAD~1
+git push origin main --force
+
+Method 2: If you edited the file directly on the GitHub Website
+
+If you changed the file inside the GitHub web browser editor, you can pull your
+original code back from your file history:
+
+1.  Go to your repository page: https://github.com/fkawsar68/webutility
+2.  Click on the index.html file.
+3.  In the top-right of the code box, click the History button (with the clock
+    icon).
+4.  Click on the commit before the modifications were made.
+5.  Click the View file button on the right side of that commit.
+6.  Click Raw to copy your exact, original landing page code and paste it back
+    into your editor.
+
+Method 3: Backup Portfolio landing page template
+
+If you do not have Git history active and need a clean, lightweight central
+portfolio index page template, the code below represents your original suite of
+8 active tools (SwiftCompress, SwiftWrite, SwiftBoard, SwiftPDF, ZenJournal, ROI
+Calculator, Mortgage Estimator, and your Browser Extensions) without any
+personal ledger references:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebUtility - Privacy-First Local Web Tools</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232563eb'/%3E%3Cpath d='M30 50h40M50 30v40' stroke='white' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        <header class="text-center mb-16 border-b border-slate-200 dark:border-slate-800 pb-8">
+            <h1 class="text-4xl font-extrabold text-blue-600 dark:text-blue-500 mb-4">WebUtility</h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                A collection of client-side web tools. Your data is processed entirely in your browser—no uploads, no tracking, and no servers.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 1. SwiftCompress -->
+            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
                 <div>
-                    <h3 class="font-bold text-slate-800 dark:text-slate-100 text-lg">Personal Ledger</h3>
-                    <p class="text-xs text-slate-400 dark:text-slate-500">Offline Ledger Tracker</p>
+                    <h3 class="font-bold text-lg mb-2">SwiftCompress</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Bulk image compression running entirely inside your browser tab. Drag, drop, and optimize without server uploads.</p>
                 </div>
+                <a href="https://fkawsar68.github.io/swiftcompress/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch SwiftCompress</a>
             </div>
-            <span class="bg-emerald-100 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full">Freemium</span>
+
+            <!-- 2. SwiftWrite -->
+            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">SwiftWrite</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Distraction-free markdown writing and layout previewing. Auto-saves directly to your local browser storage.</p>
+                </div>
+                <a href="https://fkawsar68.github.io/swiftwrite/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch SwiftWrite</a>
+            </div>
+
+            <!-- 3. SwiftBoard -->
+            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">SwiftBoard</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Offline local Kanban board. Organize projects, columns, and tasks securely on your own device.</p>
+                </div>
+                <a href="https://fkawsar68.github.io/swiftboard/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch SwiftBoard</a>
+            </div>
+
+            <!-- 4. SwiftPDF -->
+            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">SwiftPDF</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Split, merge, and compress your PDF documents locally. Your confidential documents never leave your computer.</p>
+                </div>
+                <a href="https://fkawsar68.github.io/pdf-local/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch SwiftPDF</a>
+            </div>
+
+            <!-- 5. ZenJournal -->
+            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">ZenJournal</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Local-first markdown private journal and task logging dashboard, utilizing browser IndexedDB structures.</p>
+                </div>
+                <a href="https://fkawsar68.github.io/zenjournal/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch ZenJournal</a>
+            </div>
+
+            <!-- 6. ROI Calculator -->
+            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">SaaS ROI Calculator</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Dual-slider investment and SaaS return-on-investment model tool optimized for embedded integration.</p>
+                </div>
+                <a href="https://fkawsar68.github.io/roi-calculator/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch Calculator</a>
+            </div>
+
+            <!-- 7. Mortgage Estimator -->
+            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Mortgage Estimator</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Interactive real-estate mortgage cost calculator featuring flexible annual toggles and custom charts.</p>
+                </div>
+                <a href="https://fkawsar68.github.io/mortgage-estimator/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch Estimator</a>
+            </div>
+
+            <!-- 8. Browser Extensions -->
+            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Niche Browser Extensions</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Focus Space blocks and Tab Session manager extensions designed to improve local workflow efficiency.</p>
+                </div>
+                <a href="https://webutility.lemonsqueezy.com" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">View Licenses</a>
+            </div>
         </div>
-        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
-            Privacy-first multi-currency ledger supporting 7 languages, dual-currency side-by-side comparison, and parent-child expense categorization. Zero server tracking.
-        </p>
-        <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-1.5 mb-6">
-            <li class="flex items-center gap-2">
-                <span class="text-blue-500">✔</span> Stored 100% locally via browser localStorage
-            </li>
-            <li class="flex items-center gap-2">
-                <span class="text-blue-500">✔</span> Syncs exchange rates via public currency APIs
-            </li>
-            <li class="flex items-center gap-2">
-                <span class="text-blue-500">✔</span> PDF/Print statement stylesheet built-in
-            </li>
-        </ul>
     </div>
-    <div class="flex items-center gap-3">
-        <!-- THIS URL NOW OPENS THE INDEPENDENT LEDGER APP DIRECTLY -->
-        <a href="https://fkawsar68.github.io/personal-ledger/" target="_blank" class="flex-1 text-center py-2 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm transition-colors">
-            Launch App
-        </a>
-        <a href="https://github.com/fkawsar68/personal-ledger" target="_blank" class="py-2 px-3 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-            </svg>
-        </a>
-    </div>
-</div>
+</body>
+</html>

@@ -1,137 +1,240 @@
-Because the original central landing page HTML code for your webutility
-repository was not pasted into this chat session, I do not have its exact
-previous text in my active context.
-
-However, you can instantly recover your exact original landing page file using
-one of the two methods below.
-
-Method 1: If you edited the file in your terminal (using Git)
-
-If you made edits locally and haven't committed them, run this terminal command
-in your webutility project folder to instantly discard the changes and restore
-your original file:
-
-git checkout -- index.html
-
-If you already committed and pushed the changes to GitHub, you can revert the
-last commit with:
-
-git reset --hard HEAD~1
-git push origin main --force
-
-Method 2: If you edited the file directly on the GitHub Website
-
-If you changed the file inside the GitHub web browser editor, you can pull your
-original code back from your file history:
-
-1.  Go to your repository page: https://github.com/fkawsar68/webutility
-2.  Click on the index.html file.
-3.  In the top-right of the code box, click the History button (with the clock
-    icon).
-4.  Click on the commit before the modifications were made.
-5.  Click the View file button on the right side of that commit.
-6.  Click Raw to copy your exact, original landing page code and paste it back
-    into your editor.
-
-Method 3: Backup Portfolio landing page template
-
-If you do not have Git history active and need a clean, lightweight central
-portfolio index page template, the code below represents your original suite of
-8 active tools (SwiftCompress, SwiftWrite, SwiftBoard, SwiftPDF, ZenJournal, ROI
-Calculator, Mortgage Estimator, and your Browser Extensions) without any
-personal ledger references:
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebUtility - Privacy-First Local Web Tools</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232563eb'/%3E%3Cpath d='M30 50h40M50 30v40' stroke='white' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
-</head>
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen">
-    <div class="max-w-6xl mx-auto px-4 py-12">
-        <header class="text-center mb-16 border-b border-slate-200 dark:border-slate-800 pb-8">
-            <h1 class="text-4xl font-extrabold text-blue-600 dark:text-blue-500 mb-4">WebUtility</h1>
-            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                A collection of client-side web tools. Your data is processed entirely in your browser—no uploads, no tracking, and no servers.
-            </p>
-        </header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebUtility — Privacy-First Browser Tools</title>
+<meta name="description" content="Professional web tools that run entirely in your browser. No uploads, no accounts, no tracking. Pay once, use forever.">
+<meta property="og:title" content="WebUtility — Privacy-First Browser Tools">
+<meta property="og:description" content="5 professional tools. Run entirely in your browser. Pay once, use forever.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap');
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- 1. SwiftCompress -->
-            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">SwiftCompress</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Bulk image compression running entirely inside your browser tab. Drag, drop, and optimize without server uploads.</p>
-                </div>
-                <a href="https://fkawsar68.github.io/swiftcompress/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch SwiftCompress</a>
-            </div>
+:root {
+  --bg: #0A0806;
+  --bg2: #0F0C09;
+  --surface: #141008;
+  --card: #1A1510;
+  --border: #2A2018;
+  --border2: #342C1C;
+  --text: #F2E8D8;
+  --text-muted: #7A6A54;
+  --text-dim: #3A3020;
+  --accent: #E8702A;
+  --accent2: #C85820;
+  --accent-soft: #261408;
+  --gold: #D4A830;
+  --gold-soft: #201808;
+  --green: #4AAA70;
+  --glow-accent: rgba(232,112,42,0.15);
+  --glow-gold: rgba(212,168,48,0.1);
+}
 
-            <!-- 2. SwiftWrite -->
-            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">SwiftWrite</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Distraction-free markdown writing and layout previewing. Auto-saves directly to your local browser storage.</p>
-                </div>
-                <a href="https://fkawsar68.github.io/swiftwrite/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch SwiftWrite</a>
-            </div>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-            <!-- 3. SwiftBoard -->
-            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">SwiftBoard</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Offline local Kanban board. Organize projects, columns, and tasks securely on your own device.</p>
-                </div>
-                <a href="https://fkawsar68.github.io/swiftboard/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch SwiftBoard</a>
-            </div>
+html { scroll-behavior: smooth; }
 
-            <!-- 4. SwiftPDF -->
-            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">SwiftPDF</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Split, merge, and compress your PDF documents locally. Your confidential documents never leave your computer.</p>
-                </div>
-                <a href="https://fkawsar68.github.io/pdf-local/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch SwiftPDF</a>
-            </div>
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
 
-            <!-- 5. ZenJournal -->
-            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">ZenJournal</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Local-first markdown private journal and task logging dashboard, utilizing browser IndexedDB structures.</p>
-                </div>
-                <a href="https://fkawsar68.github.io/zenjournal/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch ZenJournal</a>
-            </div>
+/* ── NOISE TEXTURE ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
 
-            <!-- 6. ROI Calculator -->
-            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">SaaS ROI Calculator</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Dual-slider investment and SaaS return-on-investment model tool optimized for embedded integration.</p>
-                </div>
-                <a href="https://fkawsar68.github.io/roi-calculator/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch Calculator</a>
-            </div>
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 56px;
+  background: rgba(10,8,6,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  z-index: 100;
+  gap: 32px;
+}
 
-            <!-- 7. Mortgage Estimator -->
-            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">Mortgage Estimator</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Interactive real-estate mortgage cost calculator featuring flexible annual toggles and custom charts.</p>
-                </div>
-                <a href="https://fkawsar68.github.io/mortgage-estimator/" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">Launch Estimator</a>
-            </div>
+.nav-brand {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
 
-            <!-- 8. Browser Extensions -->
-            <div class="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div>
-                    <h3 class="font-bold text-lg mb-2">Niche Browser Extensions</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Focus Space blocks and Tab Session manager extensions designed to improve local workflow efficiency.</p>
-                </div>
-                <a href="https://webutility.lemonsqueezy.com" class="block text-center py-2 px-4 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm">View Licenses</a>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+.nav-brand span { color: var(--accent); }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin-left: auto;
+  align-items: center;
+}
+
+nav ul a {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+nav ul a:hover { color: var(--text); }
+
+.nav-cta {
+  padding: 8px 18px;
+  background: var(--accent);
+  color: #fff !important;
+  border-radius: 7px;
+  font-weight: 500;
+  transition: background 0.15s !important;
+}
+
+.nav-cta:hover { background: var(--accent2) !important; color: #fff !important; }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse, var(--glow-accent) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--accent-soft);
+  border: 1px solid var(--border2);
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(42px, 7vw, 80px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--text);
+  max-width: 820px;
+  margin-bottom: 24px;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hero-sub {
+  font-size: clamp(15px, 2vw, 18px);
+  color: var(--text-muted);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.btn-primary {
+  padding: 14px 28px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,112,42,0.3); }
+
+.btn-ghost {
+  padding: 14px 28px;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  disp

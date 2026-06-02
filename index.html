@@ -237,4 +237,880 @@ h1 em {
 
 /* ── TRUST BAR ── */
 .trust-bar {
-  disp
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.trust-item .dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+/* ── SECTION ── */
+section {
+  padding: 96px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  max-width: 40px;
+  height: 1px;
+  background: var(--border2);
+}
+
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.section-sub {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.65;
+  margin-bottom: 52px;
+  font-weight: 300;
+}
+
+/* ── PRODUCT GRID ── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.product-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 26px;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border2), transparent);
+}
+
+.product-card:hover {
+  border-color: var(--border2);
+  background: #1E1A12;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px var(--border2);
+}
+
+.card-icon {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  background: var(--accent-soft);
+  border: 1px solid var(--border2);
+  flex-shrink: 0;
+}
+
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.card-meta { flex: 1; }
+
+.card-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+
+.card-category {
+  font-size: 10.5px;
+  font-family: 'DM Mono', monospace;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.card-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.card-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.feat-tag {
+  font-size: 10.5px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.03em;
+}
+
+.card-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.card-price {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.card-price small {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-family: 'DM Mono', monospace;
+  margin-left: 4px;
+}
+
+.card-link {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s;
+}
+
+.product-card:hover .card-link { color: var(--accent); }
+
+/* ── DIVIDER ── */
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 24px;
+}
+
+/* ── HOW IT WORKS ── */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.step-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--text-dim);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.step h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.step p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* ── PRICING ── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  max-width: 720px;
+}
+
+.price-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 30px;
+  position: relative;
+}
+
+.price-card.featured {
+  border-color: var(--accent);
+  background: #1E1510;
+  box-shadow: 0 0 40px var(--glow-accent);
+}
+
+.price-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.price-tier {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.price-amount {
+  font-family: 'Syne', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.price-amount sup {
+  font-size: 18px;
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.price-note {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-family: 'DM Mono', monospace;
+}
+
+.price-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 24px;
+}
+
+.price-features li {
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price-features li::before {
+  content: '✓';
+  color: var(--green);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.price-features li.locked { opacity: 0.35; }
+.price-features li.locked::before { content: '×'; color: var(--text-dim); }
+
+.price-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 9px;
+  font-family: 'Syne', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s;
+  border: none;
+}
+
+.price-btn.primary { background: var(--accent); color: #fff; }
+.price-btn.primary:hover { background: var(--accent2); transform: translateY(-1px); }
+.price-btn.outline { background: transparent; border: 1px solid var(--border2); color: var(--text-muted); }
+.price-btn.outline:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
+/* ── PRIVACY SECTION ── */
+.privacy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.privacy-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.privacy-icon { font-size: 22px; }
+
+.privacy-card h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.privacy-card p {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  font-weight: 300;
+}
+
+/* ── FAQ ── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 680px;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--card);
+}
+
+.faq-q {
+  width: 100%;
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  transition: color 0.15s;
+}
+
+.faq-q:hover { color: var(--accent); }
+.faq-q .arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.2s; flex-shrink: 0; }
+.faq-item.open .faq-q .arrow { transform: rotate(45deg); color: var(--accent); }
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.open .faq-a { max-height: 200px; }
+
+.faq-a p {
+  padding: 0 20px 16px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* ── CTA BANNER ── */
+#cta {
+  background: linear-gradient(135deg, var(--surface) 0%, #1A1008 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 80px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#cta::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px; height: 300px;
+  background: radial-gradient(ellipse, var(--glow-accent) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+#cta h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+#cta p {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-brand {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: -0.02em;
+}
+
+.footer-brand span { color: var(--accent); }
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.footer-links a {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.footer-links a:hover { color: var(--text); }
+
+.footer-note {
+  font-size: 11.5px;
+  color: var(--text-dim);
+  font-family: 'DM Mono', monospace;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  nav ul { display: none; }
+  .trust-bar { gap: 16px; }
+  section { padding: 64px 20px; }
+  footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">Web<span>Utility</span></a>
+  <ul>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="https://webutility.lemonsqueezy.com/checkout/buy/d69dfd66-111c-4492-8d73-6dcc0fefe83c" class="nav-cta" target="_blank">Get Premium</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-badge">5 Tools · 100% Private · No Accounts</div>
+  <h1>Browser tools that<br><em>respect your privacy</em></h1>
+  <p class="hero-sub">Professional utilities that run entirely in your browser. Your files never leave your device. Pay once, use forever.</p>
+  <div class="hero-actions">
+    <a href="#tools" class="btn-primary">Browse Tools →</a>
+    <a href="https://webutility.lemonsqueezy.com/checkout/buy/d69dfd66-111c-4492-8d73-6dcc0fefe83c" class="btn-ghost" target="_blank">✦ Get Premium — $9</a>
+  </div>
+  <div class="trust-bar">
+    <div class="trust-item"><div class="dot"></div>No uploads to servers</div>
+    <div class="trust-item"><div class="dot"></div>No account required</div>
+    <div class="trust-item"><div class="dot"></div>No tracking</div>
+    <div class="trust-item"><div class="dot"></div>One-time payment</div>
+  </div>
+</div>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="section-label">Products</div>
+  <h2 class="section-title">Five tools. One mission.</h2>
+  <p class="section-sub">Each tool is a self-contained web app. Open it, use it, close it. No setup, no login, no data collection.</p>
+
+  <div class="product-grid">
+
+    <a href="https://fkawsar68.github.io/swiftcompress/" class="product-card" target="_blank">
+      <div class="card-top">
+        <div class="card-icon">⚡</div>
+        <div class="card-meta">
+          <div class="card-name">SwiftCompress</div>
+          <div class="card-category">Image Optimizer</div>
+        </div>
+      </div>
+      <div class="card-desc">Bulk compress images in your browser using Canvas API. Supports JPG, PNG, WebP. Try 3 files free.</div>
+      <div class="card-features">
+        <span class="feat-tag">bulk compress</span>
+        <span class="feat-tag">JPG · PNG · WebP</span>
+        <span class="feat-tag">ZIP download</span>
+      </div>
+      <div class="card-footer-row">
+        <div class="card-price">$15<small>flat</small></div>
+        <div class="card-link">Open tool →</div>
+      </div>
+    </a>
+
+    <a href="https://fkawsar68.github.io/swiftwrite/" class="product-card" target="_blank">
+      <div class="card-top">
+        <div class="card-icon">✍</div>
+        <div class="card-meta">
+          <div class="card-name">SwiftWrite</div>
+          <div class="card-category">Markdown Editor</div>
+        </div>
+      </div>
+      <div class="card-desc">Distraction-free markdown editor with live preview, auto-save, and multiple themes. Everything stored locally.</div>
+      <div class="card-features">
+        <span class="feat-tag">live preview</span>
+        <span class="feat-tag">auto-save</span>
+        <span class="feat-tag">focus mode</span>
+      </div>
+      <div class="card-footer-row">
+        <div class="card-price">$9<small>flat</small></div>
+        <div class="card-link">Open tool →</div>
+      </div>
+    </a>
+
+    <a href="https://fkawsar68.github.io/swiftboard/" class="product-card" target="_blank">
+      <div class="card-top">
+        <div class="card-icon">◫</div>
+        <div class="card-meta">
+          <div class="card-name">SwiftBoard</div>
+          <div class="card-category">Kanban Board</div>
+        </div>
+      </div>
+      <div class="card-desc">Local-first Kanban task board with drag-and-drop, priorities, due dates, and tags. No account needed.</div>
+      <div class="card-features">
+        <span class="feat-tag">drag & drop</span>
+        <span class="feat-tag">offline-first</span>
+        <span class="feat-tag">priorities</span>
+      </div>
+      <div class="card-footer-row">
+        <div class="card-price">$9<small>flat</small></div>
+        <div class="card-link">Open tool →</div>
+      </div>
+    </a>
+
+    <a href="https://fkawsar68.github.io/pdf-local/" class="product-card" target="_blank">
+      <div class="card-top">
+        <div class="card-icon">📄</div>
+        <div class="card-meta">
+          <div class="card-name">SwiftPDF</div>
+          <div class="card-category">PDF Toolkit</div>
+        </div>
+      </div>
+      <div class="card-desc">Compress, merge, and split PDFs entirely in your browser. Files never uploaded anywhere.</div>
+      <div class="card-features">
+        <span class="feat-tag">compress</span>
+        <span class="feat-tag">merge</span>
+        <span class="feat-tag">split</span>
+      </div>
+      <div class="card-footer-row">
+        <div class="card-price">$9<small>flat</small></div>
+        <div class="card-link">Open tool →</div>
+      </div>
+    </a>
+
+    <a href="https://fkawsar68.github.io/roi-calculator/" class="product-card" target="_blank">
+      <div class="card-top">
+        <div class="card-icon">⊞</div>
+        <div class="card-meta">
+          <div class="card-name">Calculators</div>
+          <div class="card-category">Embeddable Widgets</div>
+        </div>
+      </div>
+      <div class="card-desc">SaaS ROI Calculator and Mortgage Estimator. Embeddable on any website. Clean, interactive design.</div>
+      <div class="card-features">
+        <span class="feat-tag">ROI calculator</span>
+        <span class="feat-tag">mortgage estimator</span>
+        <span class="feat-tag">embeddable</span>
+      </div>
+      <div class="card-footer-row">
+        <div class="card-price">Free</div>
+        <div class="card-link">Open tool →</div>
+      </div>
+    </a>
+
+    <a href="https://webutility.lemonsqueezy.com/checkout/buy/e372d81b-ab20-4023-ad19-0bffb39a6865" class="product-card" target="_blank">
+      <div class="card-top">
+        <div class="card-icon">🔌</div>
+        <div class="card-meta">
+          <div class="card-name">Extensions</div>
+          <div class="card-category">Browser Extensions</div>
+        </div>
+      </div>
+      <div class="card-desc">Focus Space distraction blocker and Tab Session Workspace Manager. Manifest V3, privacy-first.</div>
+      <div class="card-features">
+        <span class="feat-tag">focus blocker</span>
+        <span class="feat-tag">tab manager</span>
+        <span class="feat-tag">manifest v3</span>
+      </div>
+      <div class="card-footer-row">
+        <div class="card-price">$9<small>flat</small></div>
+        <div class="card-link">Open tool →</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-label">Process</div>
+  <h2 class="section-title">How it works</h2>
+  <p class="section-sub">No setup. No learning curve. Open and use.</p>
+
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Open in browser</h3>
+      <p>Click any tool. It loads instantly in your browser tab. No install, no download, no account creation.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>Use immediately</h3>
+      <p>Drag your files, start typing, or add tasks. All processing happens locally on your device.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Upgrade once</h3>
+      <p>Hit a free limit? Pay $9 once per tool. Your license key unlocks everything — permanently.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <h3>Keep it forever</h3>
+      <p>No subscription. No renewal. The tool works the same in 5 years as it does today.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- PRIVACY -->
+<section>
+  <div class="section-label">Privacy</div>
+  <h2 class="section-title">Your data never leaves</h2>
+  <p class="section-sub">Every tool is designed with one rule: nothing gets sent to a server.</p>
+
+  <div class="privacy-grid">
+    <div class="privacy-card">
+      <div class="privacy-icon">🖥</div>
+      <h4>Local processing</h4>
+      <p>All computation runs in your browser using WebAssembly and native browser APIs.</p>
+    </div>
+    <div class="privacy-card">
+      <div class="privacy-icon">🚫</div>
+      <h4>No file uploads</h4>
+      <p>Your PDFs, images, and documents are never sent anywhere. Not even to us.</p>
+    </div>
+    <div class="privacy-card">
+      <div class="privacy-icon">👤</div>
+      <h4>No accounts</h4>
+      <p>No email, no password, no profile. Open the tool and use it.</p>
+    </div>
+    <div class="privacy-card">
+      <div class="privacy-icon">📊</div>
+      <h4>No analytics</h4>
+      <p>No tracking scripts, no cookies, no telemetry. Your usage is completely private.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-label">Pricing</div>
+  <h2 class="section-title">Simple, flat pricing</h2>
+  <p class="section-sub">Each tool has a free tier. Upgrade once per tool to unlock everything.</p>
+
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-tier">Free</div>
+      <div class="price-amount"><sup>$</sup>0</div>
+      <div class="price-note">forever · no card needed</div>
+      <ul class="price-features">
+        <li>Core tool functionality</li>
+        <li>Limited file counts</li>
+        <li>Basic features</li>
+        <li class="locked">Premium features</li>
+        <li class="locked">Unlimited usage</li>
+      </ul>
+      <a href="#tools" class="price-btn outline">Try Free Tools</a>
+    </div>
+    <div class="price-card featured">
+      <div class="price-badge">Most Popular</div>
+      <div class="price-tier">Premium</div>
+      <div class="price-amount"><sup>$</sup>9</div>
+      <div class="price-note">per tool · pay once · yours forever</div>
+      <ul class="price-features">
+        <li>All free features</li>
+        <li>Unlimited usage</li>
+        <li>All premium features</li>
+        <li>All future updates</li>
+        <li>Instant license key</li>
+      </ul>
+      <a href="https://webutility.lemonsqueezy.com/checkout/buy/d69dfd66-111c-4492-8d73-6dcc0fefe83c" class="price-btn primary" target="_blank">Get Premium — $9</a>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-label">FAQ</div>
+  <h2 class="section-title">Questions answered</h2>
+  <p class="section-sub" style="margin-bottom:32px">Everything you need to know.</p>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Do my files get uploaded to your servers? <span class="arrow">+</span></button>
+      <div class="faq-a"><p>No. Every tool runs entirely in your browser using local processing. Your files never leave your device and are never sent to any server — including ours.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Is the $9 a one-time payment or a subscription? <span class="arrow">+</span></button>
+      <div class="faq-a"><p>One-time payment per tool. Pay once, use it forever. No renewals, no monthly fees, no surprises. All future updates to that tool are included at no extra cost.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How do I activate my license key? <span class="arrow">+</span></button>
+      <div class="faq-a"><p>After purchase, you receive a license key starting with SW-. Open the tool, click the Premium button, enter your key, and click Activate. Done.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What payment methods are accepted? <span class="arrow">+</span></button>
+      <div class="faq-a"><p>All major credit and debit cards are accepted worldwide. Payments are processed securely by Lemon Squeezy, who acts as the Merchant of Record.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Do the tools work offline? <span class="arrow">+</span></button>
+      <div class="faq-a"><p>Once loaded in your browser, most tools work offline. An internet connection is needed to initially load the page and for the checkout process only.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Can I get a refund? <span class="arrow">+</span></button>
+      <div class="faq-a"><p>Yes. If the tool doesn't work as described, contact us within 7 days for a full refund. No questions asked.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div id="cta">
+  <h2>Start using free today</h2>
+  <p>No account. No card. Just open and use.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a href="#tools" class="btn-primary">Browse All Tools →</a>
+    <a href="https://webutility.lemonsqueezy.com/checkout/buy/d69dfd66-111c-4492-8d73-6dcc0fefe83c" class="btn-ghost" target="_blank">✦ Get Premium — $9</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Web<span>Utility</span></div>
+  <ul class="footer-links">
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <div class="footer-note">Privacy-first · GitHub Pages · Powered by Lemon Squeezy</div>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>
